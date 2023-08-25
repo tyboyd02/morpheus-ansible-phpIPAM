@@ -7,6 +7,5 @@ resource "instance-type-layout" "fdf17bcb-3f52-47d6-9589-1b79c71fd74a" {
   labels = [ "phpIPAM" ]
   memoryRequirement = 1073741824
   provisionType = { code = "vmware" }
-  taskSets = [ { name = "Install phpIPAM" } ]
   workloads = [ { code = "72143677-bdf6-4ea6-ab16-826fcff223ea" } ]
 }
