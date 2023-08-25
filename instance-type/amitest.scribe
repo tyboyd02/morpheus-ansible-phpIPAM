@@ -1,0 +1,9 @@
+resource "instance-type" "amitest" {
+  code = "amitest"
+  name = "AMI Test"
+  uuid = "441a95fd-2c8b-4243-8c39-73c61a461933"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AMI_TEST"
+  visibility = "public"
+}

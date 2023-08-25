@@ -1,0 +1,15 @@
+resource "container-type" "b10bbec7-c5e3-4c08-8240-4fea573313f5" {
+  code = "b10bbec7-c5e3-4c08-8240-4fea573313f5"
+  name = "My win22 AMI"
+  uuid = "5d98c25a-048c-4eb3-9bd1-679577327d03"
+  containerVersion = "1"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "amazon" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "mywin22ami"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "amazon.ec2.image.17.ami-00053cb5ddeb331a9" }
+}
