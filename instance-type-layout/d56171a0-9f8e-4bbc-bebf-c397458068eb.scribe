@@ -1,0 +1,10 @@
+resource "instance-type-layout" "d56171a0-9f8e-4bbc-bebf-c397458068eb" {
+  code = "d56171a0-9f8e-4bbc-bebf-c397458068eb"
+  name = "Ubuntu"
+  uuid = "fac5e953-bf27-4d66-976f-bff400ea9c84"
+  instanceType = { code = "ubuntu2204-BP" }
+  instanceVersion = "16.04"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "ubuntu-16.04-docker" } ]
+}
