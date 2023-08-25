@@ -1,0 +1,15 @@
+resource "task" "Example - API Bash Call" {
+  name = "Example - API Bash Call"
+  uuid = "62f66fc2-a7c9-4edc-a739-b4881d01e5c8"
+  dateCreated = "2023-08-11T14:39:31.000Z"
+  executeTarget = "local"
+  lastUpdated = "2023-08-14T16:40:11.000Z"
+  options = [
+    {
+      content = { uuid = "42888a81-f2e6-4d13-b4b6-ff2bb0a3b4e1" }
+      optionType = { code = "script" }
+    }
+  ]
+  resultType = "json"
+  taskType = { code = "script" }
+}
