@@ -1,0 +1,22 @@
+resource "task" "instanceinfo" {
+  code = "instanceinfo"
+  name = "var test 3 - API Call python and output JSON"
+  uuid = "044a0874-cba3-44f4-923c-4b7f0bc6c6ce"
+  dateCreated = "2023-08-11T14:47:48.000Z"
+  executeTarget = "local"
+  labels = [ "resultTypeJSON" ]
+  lastUpdated = "2023-08-14T18:25:26.000Z"
+  options = [
+    { optionType = { code = "pythonBinary" }, value = "python3" },
+    {
+      optionType = { code = "pythonAdditionalPackages" }
+      value = "requests"
+    },
+    {
+      content = { uuid = "bfa5ac19-dfc5-4f66-b4bd-ad727833f098" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  resultType = "json"
+  taskType = { code = "jythonTask" }
+}

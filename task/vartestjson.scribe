@@ -1,0 +1,17 @@
+resource "task" "vartestjson" {
+  code = "vartestjson"
+  name = "var test 4 - JSON"
+  uuid = "609919b1-ca34-46ea-8701-190146284d44"
+  dateCreated = "2023-08-14T14:28:52.000Z"
+  executeTarget = "local"
+  labels = [ "resultTypeKVP" ]
+  lastUpdated = "2023-08-14T18:43:54.000Z"
+  options = [
+    {
+      content = { uuid = "432a20ca-26ff-45bd-abe6-04f68c5fb00e" }
+      optionType = { code = "script" }
+    }
+  ]
+  resultType = "keyValue"
+  taskType = { code = "script" }
+}

@@ -1,0 +1,13 @@
+resource "file-content" "432a20ca-26ff-45bd-abe6-04f68c5fb00e" {
+  uuid = "432a20ca-26ff-45bd-abe6-04f68c5fb00e"
+  content = <<EOFSCRIBE
+ram_size_gb=$(( <%=results.instanceinfo.ram_size%> / 1024**3))
+disk_size_gb=$(( <%=results.instanceinfo.disk_size%> / 1024**3))
+
+echo "name=<%=results.instanceinfo.vm_name%>,core=<%=results.instanceinfo.core_count%>,ram=${ram_size_gb}GB,disk=${disk_size_gb}GB"
+
+
+EOFSCRIBE
+  dateCreated = "2023-08-14T14:28:52.000Z"
+  lastUpdated = "2023-08-14T19:03:26.000Z"
+}

@@ -1,0 +1,15 @@
+resource "task-set" "var test" {
+  name = "var test"
+  uuid = "d3998edc-712d-453d-89d2-b0779fa4cfb0"
+  dateCreated = "2023-08-11T14:01:03.000Z"
+  lastUpdated = "2023-08-14T20:11:01.000Z"
+  platform = "linux"
+  taskSetTasks = [
+    { uuid = "4ddbfd05-8b62-4010-8637-6202482c7b94" },
+    { uuid = "80f1eb04-9431-43f8-8c6f-07a83ead447a" },
+    { uuid = "9b70db3c-5e5e-4e19-9700-88e9ed93c4a1" },
+    { uuid = "bba73d8b-12b3-4c40-bbfd-7bddbca294b7" },
+    { uuid = "fbebc52d-f8dc-46e5-8c37-ed0acdff18b1" }
+  ]
+  taskSetType = "operation"
+}

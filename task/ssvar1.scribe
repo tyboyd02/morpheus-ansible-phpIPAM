@@ -1,0 +1,17 @@
+resource "task" "ssvar1" {
+  code = "ssvar1"
+  name = "var test 1 - Get instance ID"
+  uuid = "68e21091-312c-480f-b0f9-e4ac75634cec"
+  dateCreated = "2023-08-11T13:58:45.000Z"
+  executeTarget = "resource"
+  labels = [ "resultTypeSV" ]
+  lastUpdated = "2023-08-14T18:25:18.000Z"
+  options = [
+    {
+      content = { uuid = "044c5218-5e28-4569-adb3-9d7fb8618a93" }
+      optionType = { code = "script" }
+    }
+  ]
+  resultType = "value"
+  taskType = { code = "script" }
+}

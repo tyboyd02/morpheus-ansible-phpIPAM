@@ -1,0 +1,6 @@
+resource "task-set-task" "9b70db3c-5e5e-4e19-9700-88e9ed93c4a1" {
+  uuid = "9b70db3c-5e5e-4e19-9700-88e9ed93c4a1"
+  task = { code = "instanceinfo" }
+  taskOrder = 2
+  taskPhase = "operation"
+}

@@ -1,0 +1,6 @@
+resource "file-content" "044c5218-5e28-4569-adb3-9d7fb8618a93" {
+  uuid = "044c5218-5e28-4569-adb3-9d7fb8618a93"
+  content = "echo \"<%=instance.id%>\""
+  dateCreated = "2023-08-11T13:58:45.000Z"
+  lastUpdated = "2023-08-14T13:41:24.000Z"
+}

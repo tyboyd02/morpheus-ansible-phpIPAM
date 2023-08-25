@@ -1,0 +1,6 @@
+resource "task-set-task" "80f1eb04-9431-43f8-8c6f-07a83ead447a" {
+  uuid = "80f1eb04-9431-43f8-8c6f-07a83ead447a"
+  task = { name = "var test 5 - Email" }
+  taskOrder = 5
+  taskPhase = "operation"
+}
