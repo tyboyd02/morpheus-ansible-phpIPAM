@@ -5,5 +5,6 @@ resource "instance-type" "amitest" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "AMI_TEST"
+  layouts = [ { code = "64fad8cc-3fae-4edc-8e49-0a83f3542140" } ]
   visibility = "public"
 }
