@@ -117,40 +117,6 @@
         privatekey_path: /etc/ssl/phpipam.key
         csr_path: /etc/ssl/phpipam.csr
 
-    - name: Create phpIPAM Apache virtual host configuration
-      copy:
-        content: |
-          <VirtualHost *:80>
-            ServerAdmin admin@example.com
-            DocumentRoot "/var/www/html/phpipam"
-            ServerName {{ morpheus['server']['internalIp'] }}
-            Redirect permanent / https://{{ morpheus['server']['internalIp'] }}/
-            <Directory "/var/www/html/phpipam">
-              Options Indexes FollowSymLinks
-              AllowOverride All
-              Require all granted
-            </Directory>
-            ErrorLog "/var/log/apache2/phpipam-error_log"
-            CustomLog "/var/log/apache2/phpipam-access_log" combined
-          </VirtualHost>
-
-          <VirtualHost *:443>
-            ServerAdmin admin@example.com
-            DocumentRoot "/var/www/html/phpipam"
-            ServerName {{ morpheus['server']['internalIp'] }}
-            <Directory "/var/www/html/phpipam">
-              Options Indexes FollowSymLinks
-              AllowOverride All
-              Require all granted
-            </Directory>
-            SSLEngine on
-            SSLCertificateFile /etc/ssl/phpipam.crt
-            SSLCertificateKeyFile /etc/ssl/phpipam.key
-            ErrorLog "/var/log/apache2/phpipam-error_log"
-            CustomLog "/var/log/apache2/phpipam-access_log" combined
-          </VirtualHost>
-        dest: /etc/apache2/sites-available/phpipam.conf
-
     - name: Enable phpIPAM site
       command: a2ensite phpipam
       args:
