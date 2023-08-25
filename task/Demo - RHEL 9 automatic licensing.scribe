@@ -1,0 +1,15 @@
+resource "task" "Demo - RHEL 9 automatic licensing" {
+  name = "Demo - RHEL 9 automatic licensing"
+  uuid = "504de207-3e16-4263-96db-c3ad2fc2ecb3"
+  dateCreated = "2023-08-10T01:41:37.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-08-15T21:34:12.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "c73cd004-9328-40a2-87c8-d6b537da34c8" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

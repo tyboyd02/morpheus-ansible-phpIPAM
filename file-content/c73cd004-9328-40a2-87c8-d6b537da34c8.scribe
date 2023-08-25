@@ -1,0 +1,14 @@
+resource "file-content" "c73cd004-9328-40a2-87c8-d6b537da34c8" {
+  uuid = "c73cd004-9328-40a2-87c8-d6b537da34c8"
+  content = <<EOFSCRIBE
+#unregister from image 
+sudo subscription-manager unregister
+
+# Register the system
+subscription-manager register --username="<%=customOptions.RHELUserName%>" --password="<%=customOptions.RHELPassword%>" --auto-attach 
+
+
+EOFSCRIBE
+  dateCreated = "2023-08-10T01:41:37.000Z"
+  lastUpdated = "2023-08-10T02:56:07.000Z"
+}

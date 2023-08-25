@@ -1,0 +1,8 @@
+resource "task-set" "License RHEL" {
+  name = "License RHEL"
+  uuid = "a3de7e95-b0a8-44ef-8d2b-11ab1cea9426"
+  dateCreated = "2023-08-10T02:35:17.000Z"
+  labels = [ "RHEL" ]
+  lastUpdated = "2023-08-24T15:18:07.000Z"
+  taskSetTasks = [ { uuid = "bdbcd99c-45a3-4d99-b44a-42831f4b2c19" } ]
+}
