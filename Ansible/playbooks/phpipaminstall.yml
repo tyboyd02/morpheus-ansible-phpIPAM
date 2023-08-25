@@ -48,7 +48,6 @@
         CREATE DATABASE phpipam;
         GRANT ALL ON phpipam.* TO phpipam@localhost IDENTIFIED BY '{{ morpheus['customOptions']['phpipammysqlpw'] }}';
         FLUSH PRIVILEGES;"
-      ignore_errors: yes
 
     - name: Clone phpIPAM repository for Dev
       command:
