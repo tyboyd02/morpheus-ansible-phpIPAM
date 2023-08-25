@@ -1,0 +1,17 @@
+resource "instance-type" "mysqlAIO" {
+  code = "mysqlAIO"
+  name = "MySQL"
+  uuid = "4bbc04ec-0e91-448f-a602-3a580e7a6723"
+  category = "sql"
+  deploymentService = ""
+  environmentPrefix = "MYSQL"
+  featured = true
+  labels = [ "mysql" ]
+  optionTypes = [
+    { code = "dname" },
+    { code = "DatabaseUser" },
+    { code = "DatabaseUserPassword" },
+    { code = "department" }
+  ]
+  visibility = "public"
+}
