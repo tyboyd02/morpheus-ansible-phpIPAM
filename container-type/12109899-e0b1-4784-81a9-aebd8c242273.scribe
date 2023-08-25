@@ -1,0 +1,17 @@
+resource "container-type" "12109899-e0b1-4784-81a9-aebd8c242273" {
+  code = "12109899-e0b1-4784-81a9-aebd8c242273"
+  name = "Ubuntu AWS"
+  uuid = "148aa415-3b56-4145-b216-9bde59ac7409"
+  containerVersion = "16.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "amazon" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "UbuntuAWS2204"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = {
+    code = "amazon.ec2.image.morpheus.ubuntu.16.04.3-v2.ubuntu.16.04.3.amd64"
+  }
+}

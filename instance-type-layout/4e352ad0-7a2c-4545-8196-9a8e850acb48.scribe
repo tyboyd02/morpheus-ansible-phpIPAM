@@ -1,0 +1,10 @@
+resource "instance-type-layout" "4e352ad0-7a2c-4545-8196-9a8e850acb48" {
+  code = "4e352ad0-7a2c-4545-8196-9a8e850acb48"
+  name = "Ubuntu AWS"
+  uuid = "eb310ad6-8a2b-4465-9aed-a50646d8e7bf"
+  instanceType = { code = "mysqlAIO" }
+  instanceVersion = "16.04"
+  memoryRequirement = 0
+  provisionType = { code = "amazon" }
+  workloads = [ { code = "12109899-e0b1-4784-81a9-aebd8c242273" } ]
+}
