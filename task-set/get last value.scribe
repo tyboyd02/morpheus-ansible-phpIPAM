@@ -1,0 +1,8 @@
+resource "task-set" "get last value" {
+  name = "get last value"
+  uuid = "4f0ff29d-7a4e-463f-8c98-7055c1d91205"
+  dateCreated = "2023-08-14T20:17:08.000Z"
+  lastUpdated = "2023-08-14T20:24:23.000Z"
+  taskSetTasks = [ { uuid = "5caead89-ca15-413f-bc70-b3d91ec2ca8c" } ]
+  taskSetType = "operation"
+}

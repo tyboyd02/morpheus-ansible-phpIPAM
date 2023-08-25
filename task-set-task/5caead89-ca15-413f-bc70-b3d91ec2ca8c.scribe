@@ -1,0 +1,6 @@
+resource "task-set-task" "5caead89-ca15-413f-bc70-b3d91ec2ca8c" {
+  uuid = "5caead89-ca15-413f-bc70-b3d91ec2ca8c"
+  task = { name = "Last results" }
+  taskOrder = 2
+  taskPhase = "operation"
+}
