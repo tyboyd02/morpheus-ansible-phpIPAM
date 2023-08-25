@@ -1,0 +1,8 @@
+resource "instance-type" "ubuntu2204-BP" {
+  code = "ubuntu2204-BP"
+  name = "ubuntu2204-BP"
+  uuid = "04aebba5-a42b-4055-b1dd-1ef3f5c7a5eb"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "UBUNTU2204-BP"
+}

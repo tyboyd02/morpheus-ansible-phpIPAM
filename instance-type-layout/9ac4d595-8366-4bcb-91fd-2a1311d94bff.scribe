@@ -1,0 +1,10 @@
+resource "instance-type-layout" "9ac4d595-8366-4bcb-91fd-2a1311d94bff" {
+  code = "9ac4d595-8366-4bcb-91fd-2a1311d94bff"
+  name = "Ubuntu"
+  uuid = "b591621f-140b-4e3d-8171-a3057e651195"
+  instanceType = { code = "ubuntu2204-BP" }
+  instanceVersion = "22.04"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "895e2b36-de8f-4459-b59a-e55cd09c1f47" } ]
+}
