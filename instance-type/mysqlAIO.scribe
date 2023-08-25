@@ -7,6 +7,11 @@ resource "instance-type" "mysqlAIO" {
   environmentPrefix = "MYSQL"
   featured = true
   labels = [ "mysql" ]
+  layouts = [
+    { code = "00473554-5bc1-4c6c-a888-819f24108bca" },
+    { code = "4e352ad0-7a2c-4545-8196-9a8e850acb48" },
+    { code = "51df654f-7137-494c-9690-e7dea39adf68" }
+  ]
   optionTypes = [
     { code = "dname" },
     { code = "DatabaseUser" },
