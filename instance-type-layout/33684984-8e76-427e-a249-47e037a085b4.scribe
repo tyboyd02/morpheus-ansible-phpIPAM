@@ -1,0 +1,11 @@
+resource "instance-type-layout" "33684984-8e76-427e-a249-47e037a085b4" {
+  code = "33684984-8e76-427e-a249-47e037a085b4"
+  name = "S3Bucket"
+  uuid = "b300fba4-e9ee-469e-97d3-a2219cd2497b"
+  config = "{\"tfvarSecret\":\"tfvars/bobawswork\"}"
+  instanceType = { code = "S3" }
+  instanceVersion = "1"
+  memoryRequirement = 0
+  provisionType = { code = "terraform" }
+  specTemplates = [ { uuid = "754bedcb-5e68-4d29-a6a8-e52e1da5eb15" } ]
+}
