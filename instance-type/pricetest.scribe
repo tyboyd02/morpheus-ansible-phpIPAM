@@ -5,5 +5,9 @@ resource "instance-type" "pricetest" {
   category = "web"
   deploymentService = ""
   environmentPrefix = "PRICE_-_TEST"
+  layouts = [
+    { code = "54978169-436b-4ead-aef1-26daa88c5062" },
+    { code = "6432dcb3-6479-4d3b-af55-bb1687aa311e" }
+  ]
   visibility = "public"
 }
