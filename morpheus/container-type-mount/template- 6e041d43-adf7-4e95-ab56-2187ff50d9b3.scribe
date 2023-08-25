@@ -1,7 +1,7 @@
 resource "container-type-mount" "template: 6e041d43-adf7-4e95-ab56-2187ff50d9b3" {
   code = "template: 6e041d43-adf7-4e95-ab56-2187ff50d9b3"
   name = "phpIPAM conf"
-  uuid = "7805b84c-de40-475a-b5df-5809e866f4cd"
+  uuid = "59ef4904-427e-4262-93fb-e43a0f07e383"
   containerPath = "/etc/apache2/sites-available"
   hostPath = "/etc/apache2/sites-available"
   mountType = "config"
