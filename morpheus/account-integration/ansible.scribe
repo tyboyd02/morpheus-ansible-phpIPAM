@@ -1,0 +1,18 @@
+resource "account-integration" "ansible" {
+  name = "ansible"
+  uuid = "5574ec98-95b3-4dc7-953f-204d0370f816"
+  config = {
+    ansibleCommandBus = "on"
+    ansibleGalaxyEnabled = "on"
+    ansibleGroupVars = "./"
+    ansibleHostVars = "./"
+    ansiblePlaybooks = "/playbooks"
+    ansibleRoles = "/roles"
+    ansibleVerbose = null
+    cacheEnabled = null
+    defaultBranch = "main"
+  }
+  integrationType = { code = "ansible" }
+  serviceUrl = "https://github.com/tyboyd02/morpheus-ansible.git"
+  type = "ansible"
+}
