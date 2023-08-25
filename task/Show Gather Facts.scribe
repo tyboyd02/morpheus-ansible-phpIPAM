@@ -1,0 +1,19 @@
+resource "task" "Show Gather Facts" {
+  name = "Show Gather Facts"
+  uuid = "07aa7eac-a023-423b-85d8-c2ce61e16e32"
+  dateCreated = "2023-08-19T17:06:29.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-08-19T17:12:21.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleGitId" }
+      value = { name = "ansible" }
+    },
+    { optionType = { code = "ansibleGitRef" }, value = "main" },
+    {
+      optionType = { code = "ansiblePlaybook" }
+      value = "showgatherfacts.yml"
+    }
+  ]
+  taskType = { code = "ansibleTask" }
+}
