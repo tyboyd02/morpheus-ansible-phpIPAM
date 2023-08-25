@@ -1,0 +1,19 @@
+resource "option-type-list" "AWS Server size" {
+  name = "AWS Server size"
+  uuid = "fc4a4e77-0674-48ec-8176-17eb4ccb4138"
+  apiType = "servicePlans"
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.clouds&& input.groups) {
+  results.siteId = input.groups
+  results.zoneId = input.clouds
+  results.provisionTypeCode == 'amazon'
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+for (var x = 0; x < data.length; x++) {
+    results.push({name:data[x].name, value:data[x].id});
+}
+EOFSCRIBE
+  type = "api"
+}
