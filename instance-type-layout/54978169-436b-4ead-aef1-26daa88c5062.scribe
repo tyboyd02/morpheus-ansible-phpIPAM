@@ -1,0 +1,13 @@
+resource "instance-type-layout" "54978169-436b-4ead-aef1-26daa88c5062" {
+  code = "54978169-436b-4ead-aef1-26daa88c5062"
+  name = "price test VMware"
+  uuid = "6ded5f59-c6c9-48c2-9b26-f927133108ec"
+  instanceType = { code = "pricetest" }
+  instanceVersion = "1"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [
+    { code = "95ec6c51-6750-48ef-bae8-7dd2a7f3c178" },
+    { code = "a3e72e74-9d70-4056-a183-a77f204ddbc1" }
+  ]
+}

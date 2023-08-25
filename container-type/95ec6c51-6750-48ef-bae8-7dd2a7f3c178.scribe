@@ -1,0 +1,15 @@
+resource "container-type" "95ec6c51-6750-48ef-bae8-7dd2a7f3c178" {
+  code = "95ec6c51-6750-48ef-bae8-7dd2a7f3c178"
+  name = "test node 1"
+  uuid = "4097053d-3e2e-4061-8eeb-c57d3024bb15"
+  containerVersion = "1"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "testnode1vmware"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vcd.image.morpheus.ubuntu-20_04.ovf" }
+}
