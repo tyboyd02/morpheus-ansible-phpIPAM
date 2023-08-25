@@ -1,0 +1,7 @@
+resource "task-set" "Test - JSON Workflow" {
+  name = "Test - JSON Workflow"
+  uuid = "e8e7a2d7-9b85-48f7-989a-ba36475386b3"
+  dateCreated = "2023-08-14T14:34:38.000Z"
+  lastUpdated = "2023-08-14T14:37:22.000Z"
+  taskSetType = "operation"
+}
