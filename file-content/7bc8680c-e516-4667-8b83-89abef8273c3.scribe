@@ -1,6 +1,0 @@
-resource "file-content" "7bc8680c-e516-4667-8b83-89abef8273c3" {
-  uuid = "7bc8680c-e516-4667-8b83-89abef8273c3"
-  content = "hostname"
-  dateCreated = "2023-07-02T16:33:41.000Z"
-  lastUpdated = "2023-08-11T13:22:42.000Z"
-}

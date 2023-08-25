@@ -1,5 +1,0 @@
-resource "task-set-task" "4ec88877-cb5e-4d58-970b-de18d1d6a327" {
-  uuid = "4ec88877-cb5e-4d58-970b-de18d1d6a327"
-  task = { name = "MySQL apt" }
-  taskPhase = "provision"
-}

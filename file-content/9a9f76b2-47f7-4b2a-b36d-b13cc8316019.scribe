@@ -1,6 +1,0 @@
-resource "file-content" "9a9f76b2-47f7-4b2a-b36d-b13cc8316019" {
-  uuid = "9a9f76b2-47f7-4b2a-b36d-b13cc8316019"
-  content = "ansible-galaxy collection install ansible.windows"
-  dateCreated = "2023-07-25T12:28:20.000Z"
-  lastUpdated = "2023-07-25T12:28:20.000Z"
-}

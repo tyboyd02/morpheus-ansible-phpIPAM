@@ -1,5 +1,0 @@
-resource "task-set-task" "6b97772d-fb6d-4d44-8e51-836a3ac58a09" {
-  uuid = "6b97772d-fb6d-4d44-8e51-836a3ac58a09"
-  task = { code = "apikey" }
-  taskPhase = "operation"
-}

@@ -1,9 +1,0 @@
-resource "instance-type" "S3" {
-  code = "S3"
-  name = "S3 Bucket"
-  uuid = "e036caf4-adcd-4f5d-9c44-85db4ab27093"
-  category = "cloud"
-  deploymentService = ""
-  environmentPrefix = "S3_BUCKET"
-  layouts = [ { code = "33684984-8e76-427e-a249-47e037a085b4" } ]
-}

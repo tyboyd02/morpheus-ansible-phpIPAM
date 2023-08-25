@@ -1,5 +1,0 @@
-resource "task-set-task" "fbebc52d-f8dc-46e5-8c37-ed0acdff18b1" {
-  uuid = "fbebc52d-f8dc-46e5-8c37-ed0acdff18b1"
-  task = { code = "ssvar1" }
-  taskPhase = "operation"
-}

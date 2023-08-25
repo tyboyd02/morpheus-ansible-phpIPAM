@@ -1,8 +1,0 @@
-resource "task-set" "Install MySQL" {
-  name = "Install MySQL"
-  uuid = "c24d4b96-d69b-4870-8530-f9f919a6bf00"
-  dateCreated = "2023-08-07T00:43:44.000Z"
-  labels = [ "mysql" ]
-  lastUpdated = "2023-08-24T15:17:36.000Z"
-  platform = "linux"
-}

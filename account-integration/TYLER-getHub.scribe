@@ -1,9 +1,0 @@
-resource "account-integration" "TYLER-getHub" {
-  name = "TYLER-getHub"
-  uuid = "af421d31-3e8b-478c-b13b-146f982c241d"
-  category = "cm-server"
-  config = { cacheEnabled = false, defaultBranch = "" }
-  integrationType = { code = "github" }
-  serviceFlag = true
-  type = "github"
-}

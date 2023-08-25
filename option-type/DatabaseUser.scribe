@@ -1,8 +1,0 @@
-resource "option-type" "DatabaseUser" {
-  code = "DatabaseUser"
-  name = "Database User"
-  uuid = "bb084bd0-ee43-4d40-a4af-2dba5260a05a"
-  fieldContext = "config.customOptions"
-  fieldLabel = "Database User"
-  fieldName = "DatabaseUser"
-}

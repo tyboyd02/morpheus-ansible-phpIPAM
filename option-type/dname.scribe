@@ -1,8 +1,0 @@
-resource "option-type" "dname" {
-  code = "dname"
-  name = "Database Name"
-  uuid = "fe756a44-fad6-4fab-b5c9-112fa48cfa34"
-  fieldContext = "config.customOptions"
-  fieldLabel = "Database Name"
-  fieldName = "dname"
-}

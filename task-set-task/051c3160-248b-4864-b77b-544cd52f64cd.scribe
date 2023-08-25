@@ -1,5 +1,0 @@
-resource "task-set-task" "051c3160-248b-4864-b77b-544cd52f64cd" {
-  uuid = "051c3160-248b-4864-b77b-544cd52f64cd"
-  task = { name = "MySQL yum" }
-  taskPhase = "provision"
-}

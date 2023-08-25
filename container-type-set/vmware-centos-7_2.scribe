@@ -1,5 +1,0 @@
-resource "container-type-set" "vmware-centos-7.2" {
-  code = "vmware-centos-7.2"
-  uuid = "36ab9cdb-48e8-4e98-8c0f-541b38185fed"
-  workloadType = { code = "vmware-centos-7.2" }
-}

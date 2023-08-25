@@ -1,6 +1,0 @@
-resource "task-set-task" "bba73d8b-12b3-4c40-bbfd-7bddbca294b7" {
-  uuid = "bba73d8b-12b3-4c40-bbfd-7bddbca294b7"
-  task = { code = "vartestjson" }
-  taskOrder = 3
-  taskPhase = "operation"
-}

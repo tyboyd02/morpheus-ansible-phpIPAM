@@ -1,5 +1,0 @@
-resource "container-type-set" "ubuntu-16.04-docker" {
-  code = "ubuntu-16.04-docker"
-  uuid = "9ba7b0bd-cab8-482a-9435-fc6ae0ec37ff"
-  workloadType = { code = "ubuntu-16.04-docker" }
-}

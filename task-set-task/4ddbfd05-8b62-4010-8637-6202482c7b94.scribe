@@ -1,6 +1,0 @@
-resource "task-set-task" "4ddbfd05-8b62-4010-8637-6202482c7b94" {
-  uuid = "4ddbfd05-8b62-4010-8637-6202482c7b94"
-  task = { name = "var test 2 - print var" }
-  taskOrder = 1
-  taskPhase = "operation"
-}

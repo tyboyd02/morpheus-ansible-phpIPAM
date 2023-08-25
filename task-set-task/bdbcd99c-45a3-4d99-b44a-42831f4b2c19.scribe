@@ -1,4 +1,0 @@
-resource "task-set-task" "bdbcd99c-45a3-4d99-b44a-42831f4b2c19" {
-  uuid = "bdbcd99c-45a3-4d99-b44a-42831f4b2c19"
-  task = { name = "Demo - RHEL 9 automatic licensing" }
-}
