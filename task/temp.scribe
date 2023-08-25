@@ -1,0 +1,16 @@
+resource "task" "temp" {
+  name = "temp"
+  uuid = "45324c7d-2a53-4378-99fd-dc662bfef169"
+  dateCreated = "2023-08-18T18:31:34.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-08-18T18:31:34.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleGitId" }
+      value = { name = "ansible" }
+    },
+    { optionType = { code = "ansibleGitRef" }, value = "main" },
+    { optionType = { code = "ansiblePlaybook" }, value = "temp.yml" }
+  ]
+  taskType = { code = "ansibleTask" }
+}
