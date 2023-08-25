@@ -1,0 +1,10 @@
+resource "account-integration" "bob-github" {
+  name = "bob-github"
+  uuid = "ee45bcd4-3292-41f6-a1fd-6b68959ea97d"
+  category = "cm-server"
+  config = { cacheEnabled = "on", defaultBranch = "main" }
+  integrationType = { code = "git" }
+  serviceFlag = true
+  serviceUrl = "https://github.com/rboydmpc/terraformnew.git"
+  type = "git"
+}
