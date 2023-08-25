@@ -1,0 +1,18 @@
+resource "container-type" "72143677-bdf6-4ea6-ab16-826fcff223ea" {
+  code = "72143677-bdf6-4ea6-ab16-826fcff223ea"
+  name = "phpIPAM Node"
+  uuid = "2e46376f-acba-4fb1-8b4a-a1caa5069de6"
+  containerMounts = [ { code = "template: 6e041d43-adf7-4e95-ab56-2187ff50d9b3" } ]
+  containerVersion = "1"
+  entryPoint = ""
+  labels = [ "phpIPAM" ]
+  logTypeCode = "vm"
+  provisionType = { code = "vmware" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "phpnode"
+  showServerLogs = true
+  statTypeCode = "vm"
+  templates = [ { code = "6e041d43-adf7-4e95-ab56-2187ff50d9b3" } ]
+  virtualImage = { code = "vmware.vsphere.image.morpheus.ubuntu.22.04.20230307.amd64" }
+}
