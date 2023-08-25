@@ -1,0 +1,11 @@
+resource "option-type-list" "phpIPAM Dev version" {
+  name = "phpIPAM Dev version"
+  uuid = "5784b341-8cc2-4c4c-985e-f380c3e0045c"
+  initialDataset = <<EOFSCRIBE
+[
+  {"name": "Newest (1.6)", "value": "1.6"}
+]
+EOFSCRIBE
+  labels = [ "phpIPAM" ]
+  type = "manual"
+}
