@@ -6,6 +6,7 @@ resource "instance-type" "RHEL1" {
   deploymentService = ""
   environmentPrefix = "RHEL_9"
   featured = true
+  layouts = [ { code = "62732c78-831b-4c03-8c31-dc03ff23566c" } ]
   optionTypes = [ { code = "RHELUserName" }, { code = "RHELPassword" } ]
   visibility = "public"
 }
