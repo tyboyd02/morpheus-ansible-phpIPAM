@@ -1,0 +1,11 @@
+resource "instance-type" "phpIPAMndoe" {
+  code = "phpIPAMndoe"
+  name = "phpIPAM"
+  uuid = "026f3f54-c5e9-4b6e-b85c-0fd8fa1af34e"
+  category = "apps"
+  deploymentService = ""
+  environmentPrefix = "PHPIPAM"
+  featured = true
+  labels = [ "Ansible", "VMware", "phpIPAM", "ubuntu" ]
+  visibility = "public"
+}
