@@ -1,0 +1,10 @@
+resource "instance-type-layout" "1b907a0f-37c2-444d-9ec0-55310c9f2df9" {
+  code = "1b907a0f-37c2-444d-9ec0-55310c9f2df9"
+  name = "centos9 stream"
+  uuid = "ce2d28b8-f901-41f7-b444-180ce73776ca"
+  instanceType = { code = "centos7" }
+  instanceVersion = "9"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "vmware-centos-9-stream" } ]
+}
