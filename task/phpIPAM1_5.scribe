@@ -1,0 +1,19 @@
+resource "task" "phpIPAM1.5" {
+  name = "phpIPAM1.5"
+  uuid = "2fce5b52-baf3-4cb3-81e1-d638f557da64"
+  dateCreated = "2023-08-22T15:29:59.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-08-22T15:30:34.000Z"
+  options = [
+    {
+      optionType = { code = "ansibleGitId" }
+      value = { name = "ansible" }
+    },
+    { optionType = { code = "ansibleGitRef" }, value = "main" },
+    {
+      optionType = { code = "ansiblePlaybook" }
+      value = "phpipaminstall/phpipaminstall15.yml"
+    }
+  ]
+  taskType = { code = "ansibleTask" }
+}
