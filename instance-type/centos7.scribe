@@ -1,0 +1,9 @@
+resource "instance-type" "centos7" {
+  code = "centos7"
+  name = "CentOS"
+  uuid = "bc7f0905-3b7d-40b7-95dc-d1ce8819471f"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "CENTOS"
+  featured = true
+}

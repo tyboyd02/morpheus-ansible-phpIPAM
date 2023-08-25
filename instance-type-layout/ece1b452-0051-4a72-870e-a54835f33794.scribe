@@ -1,0 +1,10 @@
+resource "instance-type-layout" "ece1b452-0051-4a72-870e-a54835f33794" {
+  code = "ece1b452-0051-4a72-870e-a54835f33794"
+  name = "centos7"
+  uuid = "4e04e343-735d-42aa-9ead-d1721298ca61"
+  instanceType = { code = "centos7" }
+  instanceVersion = "7"
+  memoryRequirement = 0
+  provisionType = { code = "vmware" }
+  workloads = [ { code = "vmware-centos-7.2" } ]
+}
