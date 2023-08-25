@@ -1,0 +1,14 @@
+resource "code-repository" "mycode" {
+  name = "mycode"
+  uuid = "13e65464-4f21-4b27-9f9b-dcd77fec996a"
+  dateCreated = "2023-07-25T16:50:42.000Z"
+  defaultBranch = "main"
+  displayName = "tyboyd02/mycode"
+  externalId = "584995591"
+  integration = { name = "TYLER-getHub" }
+  lastUpdated = "2023-08-15T18:05:07.000Z"
+  orgId = "121468777"
+  orgName = "tyboyd02"
+  repoSize = 0
+  serviceUrl = "https://github.com/tyboyd02/mycode"
+}

@@ -1,0 +1,14 @@
+resource "task" "MySQL Apt install" {
+  name = "MySQL Apt install"
+  uuid = "eb4b6a15-708d-4060-8bd5-194209bdce0e"
+  dateCreated = "2023-08-15T17:57:05.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2023-08-15T17:57:05.000Z"
+  options = [
+    {
+      content = { uuid = "8d250d64-5540-4f92-b7b7-fd1080a8e6e8" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

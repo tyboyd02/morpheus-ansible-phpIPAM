@@ -1,0 +1,9 @@
+resource "file-content" "8d250d64-5540-4f92-b7b7-fd1080a8e6e8" {
+  uuid = "8d250d64-5540-4f92-b7b7-fd1080a8e6e8"
+  contentPath = "/MorpheusSpecific/MySQLinstallApt.bash"
+  contentRef = ""
+  dateCreated = "2023-08-15T17:57:05.000Z"
+  lastUpdated = "2023-08-15T17:57:05.000Z"
+  repository = { name = "mycode" }
+  sourceType = "repository"
+}
