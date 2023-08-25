@@ -1,0 +1,10 @@
+resource "option-type" "RHELUserName" {
+  code = "RHELUserName"
+  name = "RHEL User Name"
+  uuid = "c5bf51ec-01b1-49ce-af3f-37820f173774"
+  fieldContext = "config.customOptions"
+  fieldLabel = "RHEL User Name"
+  fieldName = "RHELUserName"
+  placeHolder = "example@company.com"
+  required = true
+}
