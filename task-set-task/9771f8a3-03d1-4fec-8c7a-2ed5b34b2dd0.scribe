@@ -1,0 +1,5 @@
+resource "task-set-task" "9771f8a3-03d1-4fec-8c7a-2ed5b34b2dd0" {
+  uuid = "9771f8a3-03d1-4fec-8c7a-2ed5b34b2dd0"
+  task = { name = "Minecraft server" }
+  taskPhase = "provision"
+}

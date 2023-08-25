@@ -1,0 +1,39 @@
+resource "file-content" "96839a02-f82d-4e3b-ab08-60e11dbd6567" {
+  uuid = "96839a02-f82d-4e3b-ab08-60e11dbd6567"
+  content = <<EOFSCRIBE
+#!/usr/bin/env python3
+
+import os
+import subprocess
+
+# Install OpenJDK (Java)
+def install_java():
+    subprocess.run(["sudo", "apt", "update"], check=True)
+    subprocess.run(["sudo", "apt", "install", "-y", "openjdk-8-jre-headless"], check=True)
+
+# Configuration
+minecraft_version = "1.20.1"  # Change this to the desired Minecraft version
+server_name = "minecraft_server"  # Name of the server folder
+server_memory = "4G"  # Memory allocation for the server (e.g., "2G" for 2GB)
+
+# Install Java
+install_java()
+
+# Download Minecraft server jar
+minecraft_url = f"https://launcher.mojang.com/v1/objects/{minecraft_version}/server.jar"
+if not os.path.exists("server.jar"):
+    subprocess.run(["wget", minecraft_url], check=True)
+
+# Accept Minecraft EULA
+if not os.path.exists("eula.txt"):
+    with open("eula.txt", "w") as f:
+        f.write("eula=true\n")
+
+# Start the server in a screen session
+start_command = f"java -Xmx{server_memory} -Xms{server_memory} -jar server.jar nogui"
+subprocess.run(["screen", "-dmS", server_name, "bash", "-c", start_command], check=True)
+
+EOFSCRIBE
+  dateCreated = "2023-08-08T01:23:33.000Z"
+  lastUpdated = "2023-08-08T02:06:05.000Z"
+}

@@ -1,0 +1,7 @@
+resource "task-set" "Minecraft Server" {
+  name = "Minecraft Server"
+  uuid = "1433a98f-f593-40bf-8a47-4f330832e4ac"
+  dateCreated = "2023-08-08T01:46:38.000Z"
+  lastUpdated = "2023-08-08T01:46:38.000Z"
+  taskSetTasks = [ { uuid = "9771f8a3-03d1-4fec-8c7a-2ed5b34b2dd0" } ]
+}
