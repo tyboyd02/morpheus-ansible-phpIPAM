@@ -1,0 +1,15 @@
+resource "container-type" "7b7bd921-0f3d-46cd-8f67-73d03e9a037a" {
+  code = "7b7bd921-0f3d-46cd-8f67-73d03e9a037a"
+  name = "test node 2"
+  uuid = "0cac28f0-41a8-4481-a291-c0c382ea06e7"
+  containerVersion = "1"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "amazon" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "tsetnode2aws"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "amazon.ec2.image.morpheus.centos.8.4-v2" }
+}

@@ -1,0 +1,13 @@
+resource "instance-type-layout" "6432dcb3-6479-4d3b-af55-bb1687aa311e" {
+  code = "6432dcb3-6479-4d3b-af55-bb1687aa311e"
+  name = "price test AWS"
+  uuid = "919bc083-efd6-40ae-9591-fe4535be2e56"
+  instanceType = { code = "pricetest" }
+  instanceVersion = "1"
+  memoryRequirement = 0
+  provisionType = { code = "amazon" }
+  workloads = [
+    { code = "7c252fa3-8e13-46e1-a7a2-2a240f9a0359" },
+    { code = "7b7bd921-0f3d-46cd-8f67-73d03e9a037a" }
+  ]
+}
