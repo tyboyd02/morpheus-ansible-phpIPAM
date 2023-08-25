@@ -5,4 +5,5 @@ resource "instance-type" "S3" {
   category = "cloud"
   deploymentService = ""
   environmentPrefix = "S3_BUCKET"
+  layouts = [ { code = "33684984-8e76-427e-a249-47e037a085b4" } ]
 }
