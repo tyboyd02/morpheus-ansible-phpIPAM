@@ -1,0 +1,6 @@
+resource "task-set-task" "e47a4cb8-ada6-44e2-aeb8-a8680ebc298a" {
+  uuid = "e47a4cb8-ada6-44e2-aeb8-a8680ebc298a"
+  task = { code = "addawscloud" }
+  taskOrder = 1
+  taskPhase = "operation"
+}

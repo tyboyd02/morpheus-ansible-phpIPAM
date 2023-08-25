@@ -1,0 +1,29 @@
+resource "file-content" "ed797081-bfdd-42c6-8ef0-4ddeb378c7d4" {
+  uuid = "ed797081-bfdd-42c6-8ef0-4ddeb378c7d4"
+  content = <<EOFSCRIBE
+import requests
+import json
+
+url = "<%=customOptions.morphurl123%>/oauth/token?client_id=morph-api&grant_type=password&scope=write"
+
+payload = {
+    "refresh_token": "<%=customOptions.refresh_token%>",
+    "username": "<%=customOptions.username%>",
+    "password": "<%=customOptions.password%>"
+}
+headers = {
+    "accept": "application/json",
+    "content-type": "application/x-www-form-urlencoded"
+}
+
+response = requests.post(url, data=payload, headers=headers, verify=False)
+
+#print(response.text)
+response_data = response.json()
+access_token = response_data.get("access_token")
+
+print(access_token)
+EOFSCRIBE
+  dateCreated = "2023-08-15T21:33:49.000Z"
+  lastUpdated = "2023-08-16T12:24:58.000Z"
+}
