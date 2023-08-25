@@ -5,4 +5,8 @@ resource "instance-type" "ubuntu2204-BP" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "UBUNTU2204-BP"
+  layouts = [
+    { code = "9ac4d595-8366-4bcb-91fd-2a1311d94bff" },
+    { code = "d56171a0-9f8e-4bbc-bebf-c397458068eb" }
+  ]
 }
