@@ -7,5 +7,6 @@ resource "instance-type" "phpIPAMndoe" {
   environmentPrefix = "PHPIPAM"
   featured = true
   labels = [ "Ansible", "VMware", "phpIPAM", "ubuntu" ]
+  layouts = [ { code = "fdf17bcb-3f52-47d6-9589-1b79c71fd74a" } ]
   visibility = "public"
 }
