@@ -13,9 +13,11 @@
 GitHub: [https://github.com/tyboyd02/phpIPAM](https://github.com/tyboyd02/phpIPAM)
 
 **Goal**
+
 Create a catalog item to easily deploy different versions of phpIPAM from a dynamic option list, through an automated process with an Ansible playbook.
 
 **Adding the Ansible integration to Morpheus**
+
 Start by going to integrations under Administration and add the repo that hosts the playbook. You can add the public repo provided above.
 
 _Note: The ansible playbook and the Morpheus items have been exported to the repository above._
@@ -23,6 +25,7 @@ _Note: The ansible playbook and the Morpheus items have been exported to the rep
 ![image1](https://github.com/tyboyd02/phpIPAM/assets/121468777/094d0ffe-a4a1-47b0-8484-dd5d23841db3)
 
 **Create a task**
+
 This task will use the ansible playbook to install phpIPAM.
 Under the Library Automation tab add a task.
 
@@ -194,4 +197,5 @@ This uses Morpheus archives to host the images in a S3 bucket.
 ![image12](https://github.com/tyboyd02/phpIPAM/assets/121468777/570c6da7-1a8e-44ef-ab2e-e582b9e5e140)
 
 Final product
+
 ![image13](https://github.com/tyboyd02/phpIPAM/assets/121468777/100e6e39-69df-4b76-99f1-dedcdfc62a10)
