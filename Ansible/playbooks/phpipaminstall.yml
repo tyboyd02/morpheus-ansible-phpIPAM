@@ -37,7 +37,7 @@
         update_cache: yes
 
     - name: Enable and start MariaDB service
-      systemd:
+      ansible.builtin.service:
         name: mariadb
         enabled: yes
         state: started
@@ -50,11 +50,13 @@
         FLUSH PRIVILEGES;"
 
     - name: Clone phpIPAM repository for Dev
-      command:
-        cmd: git clone --recursive https://github.com/phpipam/phpipam.git /var/www/html/phpipam
+      ansible.builtin.git:
+        repo: https://github.com/phpipam/phpipam.git
+        dest: /var/www/html/phpipam
+        recursive: yes
       when: morpheus['customOptions']['lifecyclestage'] == "Dev"
 
-    - name: Download tgz for phpIPAM  
+    - name: Download tgz for phpIPAM
       ansible.builtin.get_url:
         url: "{{ morpheus['customOptions']['prodversions'] }}"
         dest: "/tmp/phpipam.tgz"
@@ -74,9 +76,11 @@
         remote_src: yes
       when: morpheus['customOptions']['lifecyclestage'] != "Dev"
 
-    - name: copy phpIPAM repository
-      command:
-        cp /var/www/html/phpipam/config.dist.php /var/www/html/phpipam/config.php
+    - name: Copy phpIPAM configuration file
+      ansible.builtin.copy:
+        src: /var/www/html/phpipam/config.dist.php
+        dest: /var/www/html/phpipam/config.php
+        remote_src: yes
 
     - name: Replace line in file 
       replace:
@@ -118,12 +122,10 @@
 
     - name: Enable phpIPAM site
       command: a2ensite phpipam
-      args:
-        warn: no  
 
     - name: Restart Apache
-      systemd:
-        name: apache2
+      ansible.builtin.service:
+        name: apache2  
         state: restarted
 
     - name: sql schema
