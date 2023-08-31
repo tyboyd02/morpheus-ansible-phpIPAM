@@ -20,13 +20,13 @@ Create a catalog item to easily deploy different versions of phpIPAM from a dyna
 
 Start by going to integrations under Administration and add the repo that hosts the playbook. You can add the public repo provided above.
 
-_Note: The ansible playbook and the Morpheus items have been exported to the repository above._
+_Note: The Ansible playbook and the Morpheus items have been exported to the repository above._
 
 ![image1](https://github.com/tyboyd02/phpIPAM/assets/121468777/094d0ffe-a4a1-47b0-8484-dd5d23841db3)
 
 **Create a task**
 
-This task will use the ansible playbook to install phpIPAM.
+This task will use the Ansible playbook to install phpIPAM.
 Under the Library Automation tab add a task.
 
 Type: Ansible Playbook
@@ -40,7 +40,7 @@ You will then create a workflow and add the newly created task in the post-Provi
 
 **File Template**
 
-Next, we will take advantage of Morpheus file templates to automatically add the phpIPAM configuration. To do this go to File Templates section under the library templates.
+Next, we will take advantage of Morpheus file templates to automatically add the phpIPAM configuration. To do this go to the File Templates section under the library templates.
 
 File Name: phpipam.conf
 File path: /etc/apache2/sites-available
@@ -123,7 +123,7 @@ _Note: The playbook provided requires Lifecycle state, version, and password to 
 
 ![image4](https://github.com/tyboyd02/phpIPAM/assets/121468777/3ad2ff27-5fcc-4e07-a776-fba1493d81b5)
 
-First, add an input to allow the user to select if they want a production or development install in the development stage. Choose the option list that we created earlier that let the user choose “Dev” or “Prod”
+First, add an input to allow the user to select if they want a production or development install in the development stage. Choose the option list that we created earlier that lets the user choose “Dev” or “Prod”
 
 ![image5](https://github.com/tyboyd02/phpIPAM/assets/121468777/99f9a232-1ec4-4cc3-82ba-d2a1e05a1769)
 
@@ -131,7 +131,7 @@ We will then want another input that becomes viewable if a prod install is selec
 
 ![image6](https://github.com/tyboyd02/phpIPAM/assets/121468777/3ec801a9-0e41-4359-b384-436c5af56295)
 
-To make it become visible only when prod is selected in the previous option, we will take advantage of the advanced tab at the bottom. 
+To make it visible only when prod is selected in the previous option, we will take advantage of the advanced tab at the bottom. 
 Visibility field: lifecyclestage:(Prod$)
 
 We will also want to make it so it requires a version to be specified when prod is selected. 
@@ -151,6 +151,8 @@ Create an instance and a layout with the “install phpIPAM” workflow that we 
 
 Then create a node within the layout and add the phpIPAM.conf file template here.<br>
 ![image9](https://github.com/tyboyd02/phpIPAM/assets/121468777/796123a4-8a72-4102-b4a3-0f6ff217aebf)
+
+For my purposes, I used the Moprheus provided Ubuntu 22.04 VM image but feel free to use your own.  
 
 **Create a phpIPAM Catalog**
 
@@ -196,6 +198,6 @@ Use if you are comfortable using the development release of phpIPAM.
 This uses Morpheus archives to host the images in a S3 bucket.
 ![image12](https://github.com/tyboyd02/phpIPAM/assets/121468777/570c6da7-1a8e-44ef-ab2e-e582b9e5e140)
 
-Final product
+**Final product**
 
 ![image13](https://github.com/tyboyd02/phpIPAM/assets/121468777/100e6e39-69df-4b76-99f1-dedcdfc62a10)
