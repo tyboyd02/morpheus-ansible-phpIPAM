@@ -1,8 +1,0 @@
-resource "task-set" "Install phpIPAM" {
-  name = "Install phpIPAM"
-  uuid = "d073abb1-7180-42ca-969c-80ab1c520332"
-  dateCreated = "2023-08-20T04:05:34.000Z"
-  labels = [ "phpIPAM" ]
-  lastUpdated = "2023-08-25T12:56:22.000Z"
-  taskSetTasks = [ { uuid = "3cf7d354-3eac-4181-86ea-e033511cc00b" } ]
-}
