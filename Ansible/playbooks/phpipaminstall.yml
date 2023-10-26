@@ -113,6 +113,7 @@
     - openssl_csr:
         path: /etc/ssl/phpipam.csr
         privatekey_path: /etc/ssl/phpipam.key
+        common_name: "{{ morpheus['server']['hostname'] }}"
 
     - openssl_certificate:
         provider: selfsigned
