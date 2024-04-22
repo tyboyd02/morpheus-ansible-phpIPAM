@@ -1,7 +1,7 @@
 ---
 - name: Install phpIPAM
   hosts: all
-  become: yes
+  become: true
   gather_facts: true
     
   tasks:
@@ -34,12 +34,12 @@
           - php-intl
           - php-gd
         state: present
-        update_cache: yes
+        update_cache: true
 
     - name: Enable and start MariaDB service
       ansible.builtin.service:
         name: mariadb
-        enabled: yes
+        enabled: true
         state: started
 
     - name: Create phpIPAM database and user
@@ -53,7 +53,7 @@
       ansible.builtin.git:
         repo: https://github.com/phpipam/phpipam.git
         dest: /var/www/html/phpipam
-        recursive: yes
+        recursive: true
       when: morpheus['customOptions']['lifecyclestage'] == "Dev"
 
     - name: Download tgz for phpIPAM
@@ -73,14 +73,14 @@
         src: "/tmp/phpipam.tgz"
         dest: "/var/www/html/phpipam"
         extra_opts: [--strip-components=1]
-        remote_src: yes
+        remote_src: true
       when: morpheus['customOptions']['lifecyclestage'] != "Dev"
 
     - name: Copy phpIPAM configuration file
       ansible.builtin.copy:
         src: /var/www/html/phpipam/config.dist.php
         dest: /var/www/html/phpipam/config.php
-        remote_src: yes
+        remote_src: true
 
     - name: Replace line in file 
       replace:

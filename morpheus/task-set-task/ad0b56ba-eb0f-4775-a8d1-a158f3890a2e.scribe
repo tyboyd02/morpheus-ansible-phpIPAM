@@ -1,4 +1,0 @@
-resource "task-set-task" "ad0b56ba-eb0f-4775-a8d1-a158f3890a2e" {
-  uuid = "ad0b56ba-eb0f-4775-a8d1-a158f3890a2e"
-  task = { name = "phpIPAM install" }
-}
