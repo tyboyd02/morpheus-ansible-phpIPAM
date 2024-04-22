@@ -121,6 +121,54 @@
         privatekey_path: /etc/ssl/phpipam.key
         csr_path: /etc/ssl/phpipam.csr
 
+    - name: Check if phpipam.conf exists
+      stat:
+        path: /etc/apache2/sites-available/phpipam.conf
+      register: phpipam_conf
+
+    - name: Create apache2/sites-available directory if it doesn't exist
+      file:
+        path: /etc/apache2/sites-available
+        state: directory
+      when: not phpipam_conf.stat.exists
+
+    - name: Create phpipam.conf if it doesn't exist
+      copy:
+        content: |
+          # phpipam.conf
+
+          <VirtualHost *:80>
+              ServerAdmin admin@example.local
+              DocumentRoot "/var/www/html/phpipam"
+              ServerName {{ morpheus['server']['internalIp'] }}
+              Redirect permanent / https://{{ morpheus['server']['internalIp'] }}/
+              <Directory "/var/www/html/phpipam">
+                  Options Indexes FollowSymLinks
+                  AllowOverride All
+                  Require all granted
+              </Directory>
+              ErrorLog "/var/log/apache2/phpipam-error_log"
+              CustomLog "/var/log/apache2/phpipam-access_log" combined
+          </VirtualHost>
+
+          <VirtualHost *:443>
+              ServerAdmin admin@example.local
+              DocumentRoot "/var/www/html/phpipam"
+              ServerName {{ morpheus['server']['internalIp'] }}
+              <Directory "/var/www/html/phpipam">
+                  Options Indexes FollowSymLinks
+                  AllowOverride All
+                  Require all granted
+              </Directory>
+              SSLEngine on
+              SSLCertificateFile /etc/ssl/phpipam.crt
+              SSLCertificateKeyFile /etc/ssl/phpipam.key
+              ErrorLog "/var/log/apache2/phpipam-error_log"
+              CustomLog "/var/log/apache2/phpipam-access_log" combined
+          </VirtualHost>
+        dest: /etc/apache2/sites-available/phpipam.conf
+      when: not phpipam_conf.stat.exists
+
     - name: Enable phpIPAM site
       command: a2ensite phpipam
 
@@ -131,3 +179,11 @@
 
     - name: sql schema
       ansible.builtin.shell: mysql -u phpipam -p{{ morpheus['customOptions']['phpipammysqlpw'] }} phpipam < /var/www/html/phpipam/db/SCHEMA.sql
+    
+    - name: Output importent info 
+      debug:
+        msg:
+          - "Access by Host Name: https://{{ morpheus['server']['hostname'] }}"
+          - "Access by IP: https://{{ morpheus['server']['interfaces'][0]['ipAddress'] }}"
+          - "Username: Admin"
+          - "Password: ipamadmin"
