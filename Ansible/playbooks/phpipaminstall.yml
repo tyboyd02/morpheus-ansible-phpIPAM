@@ -62,13 +62,13 @@
         dest: "/tmp/phpipam.tgz"
       when: morpheus['customOptions']['lifecyclestage'] != "Dev"
 
-    - name: Create the phpipam directory
+    - name: Create phpipam directory
       ansible.builtin.file:
         path: /var/www/html/phpipam
         state: directory
       when: morpheus['customOptions']['lifecyclestage'] != "Dev"
 
-    - name: Extract phpIPAM
+    - name: Extract phpIPAM.tgz
       ansible.builtin.unarchive:
         src: "/tmp/phpipam.tgz"
         dest: "/var/www/html/phpipam"
@@ -82,7 +82,7 @@
         dest: /var/www/html/phpipam/config.php
         remote_src: true
 
-    - name: Replace line in file 
+    - name: Replace line in config.php file  
       replace:
         path: /var/www/html/phpipam/config.php
         regexp: "^\\$db\\['pass'\\] = 'phpipamadmin';"
